@@ -1,0 +1,150 @@
+/* Navbar container */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dela+Gothic+One&display=swap');
+
+
+
+.navbar {
+  background-color: white;
+  padding: 20px 50px;
+  min-height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  /* max-width: 2000px; */
+  /* margin: 0 auto; */
+}
+
+/* Logo */
+.logo a {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Abril Fatface', serif;
+
+  /* font-family: 'Dela Gothic One', sans-serif; */
+  color: black;
+  text-decoration: none;
+}
+
+/* Location Selector */
+.location-selector {
+  margin-left: 20px; /* Adjust spacing as needed */
+  padding: 5px;
+  border: 1px solid #dddddd; /* Change border color as needed */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem; /* Adjust this as needed for spacing between links */
+  flex: 1;
+  margin-left: 65rem;
+}
+
+.navbar-links a {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: #e67e22;
+}
+
+/* Login Section */
+.login-section {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push login/logout to the far right */
+}
+
+.login-section button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-section button:hover {
+  background-color: #45a049;
+}
+
+/* Hamburger Menu Icon (Mobile) */
+.mobile-menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    margin: 15px 0;
+  }
+
+  .login-section {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 20px); /* Below the links */
+    right: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-section.active {
+    display: flex;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .logo {
+    flex: 1;
+  }
+}
+
+
+.logout-btn {
+  font-size: 1.85rem;
+  font-weight: bold;
+}

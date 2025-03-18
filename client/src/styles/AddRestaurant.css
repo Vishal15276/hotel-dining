@@ -1,0 +1,141 @@
+/* Overlay background for the pop-up */
+.overlay-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Container for the form (pop-up) */
+  .restaurant-form-container {
+    max-width: 400px;  /* Reduced max-width for smaller box */
+    width: 100%;
+    padding: 15px;  /* Reduced padding */
+    background-color: #f9f9f9;
+    border-radius: 15px;  /* Slightly smaller border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: formFadeIn 1s ease-out;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  /* Heading styling */
+  .form-heading {
+    text-align: center;
+    font-size: 20px;  /* Reduced font size */
+    margin-bottom: 15px;  /* Reduced margin */
+    animation: headingSlideIn 0.5s ease-out;
+  }
+  
+  /* Form Layout */
+  .form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Reduced gap between form elements */
+  }
+  
+  /* Input Fields */
+  .form-input {
+    padding: 8px;  /* Reduced padding */
+    font-size: 14px;  /* Reduced font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: inputFadeInUp 0.5s ease-in forwards;
+  }
+  
+  /* Input focus */
+  .form-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(72, 255, 0, 0.7);
+  }
+  
+  /* Submit Button Styling */
+  .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;  /* Reduced font size */
+    padding: 10px;  /* Reduced padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    opacity: 0;
+    animation: inputFadeInUp 0.5s ease-in 0.6s forwards;
+  }
+  
+  /* Button hover effect */
+  .submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Disabled button */
+  .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Fade-in animation */
+  @keyframes formFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide-in animation for heading */
+  @keyframes headingSlideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Fade-in-up animation for input fields and buttons */
+  @keyframes inputFadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Close button styling */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #000;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    color: #ff0000; /* Red color on hover */
+  }
+  

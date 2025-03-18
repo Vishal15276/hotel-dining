@@ -1,0 +1,97 @@
+.admin-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .add-restaurant-btn,
+  .view-bookings-btn {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 48%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .add-restaurant-btn:hover,
+  .view-bookings-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+  }
+  
+  .restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .restaurant-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    text-align: center;
+    height: 500px;
+  }
+  
+  .restaurant-card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .restaurant-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .restaurant-name-h3 {
+    width: 100%;
+  }
+
+  .restaurant-name-h3-summa {
+    width: 110%;
+    padding-right: 15px !important;
+  }
+  
+  
+  .restaurant-actions button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .restaurant-actions button:hover {
+    background-color: #e04e28;
+  }
+  
+  .restaurant-actions button:last-child {
+    background-color: #0056b3;
+  }
+  
+  .restaurant-actions button:last-child:hover {
+    background-color: #003f87;
+  }
+  

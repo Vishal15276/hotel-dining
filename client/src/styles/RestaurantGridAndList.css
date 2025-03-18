@@ -1,0 +1,111 @@
+.restaurant-container {
+  display: flex;
+  padding: 20px;
+}
+
+.restaurant-grid-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.restaurant-grid-sidebar {
+  width: 250px;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.restaurant-grid-filter-section {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.restaurant-grid-title,
+.restaurant-grid-subtitle {
+  margin: 0 0 15px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.restaurant-grid-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.restaurant-grid-list-item {
+  margin: 10px 0;
+  padding: 8px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.restaurant-grid-list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.restaurant-grid-list-item.active {
+  background-color: #ddd;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.restaurant-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  flex-basis: calc(20% - 20px);
+  padding-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-10px);
+}
+
+.restaurant-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  padding: 10px;
+}
+
+.restaurant-info h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.restaurant-info p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.view-details-btn {
+  padding: 10px 20px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #45a049;
+}

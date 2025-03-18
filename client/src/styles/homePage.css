@@ -1,0 +1,164 @@
+/* General Styles for the HomePage */
+.home-header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.home-page {
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styles for the search results section */
+.search-results-heading {
+  font-size: 1.8rem;
+  color: #007BFF;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card styling for the search results */
+.search-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.search-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-card img {
+  width: 100%; /* Ensure images are the same width */
+  height: 200px; /* Set height to a fixed size */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.search-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.search-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 15px 10px;
+  line-height: 1.5;
+}
+
+/* Styles for the top-rated restaurants section */
+.top-rated-heading {
+  font-size: 2rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.top-rated-hotels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hotel-slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hotel-slider button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.hotel-slider button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the hotel card in the top-rated slider */
+.top-rated-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-rated-card img {
+  width: 100%; /* Ensure images are the same width */
+  height: 200px; /* Set height to a fixed size */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.top-rated-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.top-rated-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-card, .top-rated-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .hotel-slider {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

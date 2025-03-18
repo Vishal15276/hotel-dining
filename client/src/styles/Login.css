@@ -1,0 +1,104 @@
+/* Login.css */
+
+/* General styles for the login box */
+.loginbox {
+  width: 350px;
+  height: 500px;
+  background: #f0f0f0;
+  color: #333;
+  top: 55%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Styling for the avatar/logo */
+.loginbox .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+  border: 2px solid #ccc;
+}
+
+/* Header styling */
+.loginbox h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Input fields styling */
+.loginbox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.loginbox input[type="text"],
+.loginbox input[type="password"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.loginbox input[type="text"]:focus,
+.loginbox input[type="password"]:focus {
+  border: 1px solid #888;
+  box-shadow: 0 0 5px rgba(136, 136, 136, 0.5);
+}
+
+/* Submit button styling */
+.loginbox input[type="submit"] {
+  width: 100%;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.loginbox input[type="submit"]:hover {
+  background: #45a049;
+}
+
+/* Additional links styling */
+.reg-log {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.reg-log .now {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.reg-log .now:hover {
+  color: #3e8e41;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .loginbox {
+    width: 300px;
+    padding: 50px 20px;
+  }
+}

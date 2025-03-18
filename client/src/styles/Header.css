@@ -1,0 +1,57 @@
+.header-content {
+    min-height: 75vh;
+    background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)), url("../images/bg.jpg") center/cover no-repeat;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.header{
+    margin-top: -100px;
+}
+
+.header-title {
+    font-size: 4.2rem;
+}
+
+.header-text {
+    margin-top: -1.8rem;
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    max-width: 770px;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+.search-box {
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the entire search box */
+    align-items: center; /* Vertically align input and button */
+    width: 100%;
+    max-width: 580px; /* Max width for the search box */
+    margin: 20px auto; /* Center the search box */
+}
+
+.search-input {
+    padding: 1rem 2.5rem; /* Adjust padding */
+    border-radius: 3.8rem 0 0 3.8rem; /* Round left side only */
+    font-size: 2rem;
+    width: calc(100% - 140px); /* Adjust width based on button size */
+    border: 1px solid #ccc; /* Border styling */
+    outline: none; /* Remove default focus */
+}
+
+.search-button {
+    padding: 1rem 1.4rem; /* Consistent padding with input */
+    border-radius: 0 3.8rem 3.8rem 0; /* Round right side only */
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem; /* Match the font size */
+    margin-left: 0px; /* Remove gap between input and button */ 
+}
+
+.search-button:hover {
+    background-color: #0056b3; 
+}
