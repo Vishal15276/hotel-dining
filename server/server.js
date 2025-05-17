@@ -80,58 +80,6 @@ app.get('/api/user-details', (req, res) => {
   });
 });
 
-/* ------------------ RESTAURANT ROUTES ------------------ */
-
-// Add a new restaurant to the database
-app.post('/api/restaurants', (req, res) => {
-  const { name, image, cuisine, location, rating, is_veg, most_popular_dishes, city, seats_available } = req.body;
-
-  // Check if all required fields are provided
-  if (!name || !image || !cuisine || !location || !rating || !seats_available) {
-    return res.status(400).send({ message: 'All required fields must be provided' });
-  }
-
-  const query = `
-    INSERT INTO restaurants (name, image, cuisine, location, rating, is_veg, most_popular_dishes, city, seats_available)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `;
-
-  // Convert the is_veg to a boolean value (if it's not provided as a boolean)
-  const isVeg = is_veg === 'true' || is_veg === true;
-
-  db.query(query, [name, image, cuisine, location, rating, isVeg, most_popular_dishes, city, seats_available], (err, result) => {
-    if (err) {
-      console.error('Error adding restaurant:', err);
-      return res.status(500).send({ message: 'Error adding restaurant' });
-    }
-    res.status(201).send({ message: 'Restaurant added successfully', restaurantId: result.insertId });
-  });
-});
-
-
-
-/* ------------------ RESTAURANT ROUTES ------------------ */
-
-// Delete a restaurant by ID
-app.delete('/api/restaurants/:id', (req, res) => {
-  const restaurantId = req.params.id;
-
-  const query = 'DELETE FROM restaurants WHERE id = ?';
-
-  db.query(query, [restaurantId], (err, result) => {
-    if (err) {
-      console.error('Error deleting restaurant:', err);
-      return res.status(500).send({ message: 'Error deleting restaurant' });
-    }
-    if (result.affectedRows === 0) {
-      return res.status(404).send({ message: 'Restaurant not found' });
-    }
-    res.status(200).send({ message: 'Restaurant deleted successfully' });
-  });
-});
-
-
-
 /* ------------------ ADMIN ROUTES ------------------ */
 
 // Admin login route
@@ -266,21 +214,6 @@ app.get('/api/reservation_details', (req, res) => {
     res.status(200).json(result);
   });
 });
-
-app.put('/api/bookings/:id', (req, res) => {
-  const { id } = req.params;
-  const { status } = req.body; // 'accepted' or 'declined'
-
-  const query = 'UPDATE bookings SET status = ? WHERE id = ?';
-  connection.query(query, [status, id], (err, result) => {
-    if (err) {
-      return res.status(500).json({ error: 'Database error' });
-    }
-    res.json({ message: 'Booking status updated' });
-  });
-});
-
-
 
 /* ------------------ SERVER CONFIGURATION ------------------ */
 

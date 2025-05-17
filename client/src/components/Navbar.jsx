@@ -68,7 +68,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn, setSelectedCity }) => {
         <div className="logo">
           <Link to="/">FREENCY DINE-IN</Link>
         </div>
-
+        
         <select className="location-selector" value={selectedLocation} onChange={handleLocationChange}>
           <option value="">Select Location</option>
           {tamilNaduDistricts.map((location, index) => (
